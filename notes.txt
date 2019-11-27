@@ -1,0 +1,8 @@
+CODE TEST INFO
+
+https://github.com/PropellerAero/aeropoint-programming-challenge
+
+
+ISO8601 INFO
+
+https://www.iso.org/iso-8601-date-and-time-format.html
