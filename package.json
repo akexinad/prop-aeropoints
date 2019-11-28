@@ -18,7 +18,5 @@
     "url": "https://github.com/akexinad/prop-aeropoints/issues"
   },
   "homepage": "https://github.com/akexinad/prop-aeropoints#readme",
-  "dependencies": {
-    "ftp": "^0.3.10"
-  }
+  "dependencies": {}
 }

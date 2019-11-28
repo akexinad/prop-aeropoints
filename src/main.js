@@ -44,7 +44,6 @@ function getHourBlocks(date) {
         hourBlocks.push("b");
     }
 
-
     return hourBlocks;
 }
 
