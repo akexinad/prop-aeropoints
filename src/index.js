@@ -1,4 +1,5 @@
 const Client = require("ftp");
+const axios = require("axios");
 
 const path = "ftp://www.ngs.noaa.gov/cors/rinex/2019/331/nybp/";
 const file = "ftp://www.ngs.noaa.gov/cors/rinex/2017/257/nybp/nybp257x.17o.gz"
@@ -21,7 +22,6 @@ c.on('ready', function() {
 // });
 
 
-
 // TODO: ERROR HANDLING TO CHECK IF DATE STRING IS IN ISO FORMAT
 
 
@@ -33,8 +33,6 @@ const baseStationId = inputSplit[0];
 const startTime = new Date(inputSplit[1]);
 const endTime = new Date(inputSplit[2]);
 
-// console.log(startTime);
-// console.log(endTime);
 
 function getDayOfYear(date) {
 
@@ -51,8 +49,15 @@ function getDayOfYear(date) {
 
     const dayNumberOfTheYear = argDayOfYear - firstDayOfYear;
     
-    return dayNumberOfTheYear;    
+    return dayNumberOfTheYear;
 }
 
-getDayOfYear(startTime);
-getDayOfYear(endTime);
+const startYr = startTime.getFullYear();
+const endYr = endTime.getFullYear();
+
+const startDay = getDayOfYear(startTime);
+const endDay = getDayOfYear(endTime);
+
+
+console.log(startYr);
+console.log(endYr);
